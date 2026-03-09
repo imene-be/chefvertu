@@ -100,15 +100,25 @@ function RecetteCard({ recette, onOpen }) {
       onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-5px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(0,70,30,0.12)'; e.currentTarget.style.borderColor = G }}
       onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.borderColor = GB }}
     >
-      <div style={{
-        height: '130px',
-        background: `linear-gradient(135deg, rgba(0,70,30,0.06) 0%, rgba(0,70,30,0.02) 100%)`,
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        fontSize: '3.5rem',
-        borderBottom: `1px solid rgba(0,70,30,0.06)`,
-      }}>
-        {recette.emoji}
-      </div>
+      {recette.image ? (
+        <div style={{
+          height: '200px',
+          backgroundImage: `url(${recette.image})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          borderBottom: `1px solid rgba(0,70,30,0.06)`,
+        }} />
+      ) : (
+        <div style={{
+          height: '130px',
+          background: `linear-gradient(135deg, rgba(0,70,30,0.06) 0%, rgba(0,70,30,0.02) 100%)`,
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          fontSize: '3.5rem',
+          borderBottom: `1px solid rgba(0,70,30,0.06)`,
+        }}>
+          {recette.emoji}
+        </div>
+      )}
 
       <div style={{ padding: '1.5rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
