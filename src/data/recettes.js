@@ -173,7 +173,7 @@ export const recettes = [
       'Battre les œufs avec l\'édulcorant jusqu\'à blanchissement.',
       'Incorporer le mélange chocolat, puis la farine de coco.',
       'Verser dans un moule beurré.',
-      'Cuire 20 minutes — le cœur doit rester légèrement tremblant.',
+      'Cuire 20 minutes, le cœur doit rester légèrement tremblant.',
     ],
     emoji: '🍮',
     image: '/recettes/fondant.jpg',

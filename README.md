@@ -30,6 +30,40 @@ npm run dev
 npm run build
 ```
 
+## Charte graphique
+
+### Couleurs
+
+| Rôle | Nom | Hex |
+|---|---|---|
+| Couleur principale | Vert Chef Vertu | `#00461E` |
+| Texte principal | Vert nuit | `#00170A` |
+| Hover boutons | Vert foncé | `#003618` |
+| Fond section claire | Vert très clair | `#f0f8f4` |
+| Fond section subtile | Vert pâle | `#f8fcf9` |
+| Fond / Blanc | Blanc | `#ffffff` |
+| Footer | Vert nuit profond | `#00170A` |
+
+**Accentuation — tags recettes**
+
+| Rôle | Hex |
+|---|---|
+| Doré / Beige | `#c8a96e` |
+| Vert sauge | `#6b7c5c` |
+| Brun chaud | `#8b6e5a` |
+
+### Typographie
+
+**Police unique : DM Sans** (Google Fonts)
+
+| Grammage | Usage |
+|---|---|
+| 400 | Corps de texte |
+| 400 italic | Citations, emphases |
+| 600 | Sous-titres, labels |
+| 700 | Titres de section |
+| 900 | Grands titres (hero) |
+
 ---
 
 Réalisé par [Bentifraouine Imène](https://imenebe.fr) — Développement & Design

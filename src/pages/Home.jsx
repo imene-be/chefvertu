@@ -148,14 +148,14 @@ export default function Home() {
           <div style={{ marginBottom: '2.5rem' }}>
             <p style={{ fontFamily: f, fontSize: '0.75rem', fontWeight: '700', color: G, textTransform: 'uppercase', letterSpacing: '0.14em', marginBottom: '0.75rem', marginTop: 0 }}>Notre approche</p>
             <h2 style={{ fontFamily: f, fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontWeight: '900', color: D, margin: 0, lineHeight: '1.15' }}>
-              Simple. Naturel. Efficace.
+              Fait pour vous.<br />Pensé pour votre santé.
             </h2>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             {[
-              { num: '01', titre: 'Bio & naturel', texte: 'Des ingrédients non transformés, proches de la nature, pour nourrir votre corps en profondeur.' },
-              { num: '02', titre: 'Énergie durable', texte: 'Sans pics de glycémie, sans coup de fatigue  une énergie stable tout au long de la journée.' },
-              { num: '03', titre: 'Cerveau protégé', texte: 'Moins de gluten, moins d\'inflammation. Un cerveau qui fonctionne mieux, plus longtemps.' },
+              { num: '01', titre: 'Un chef à votre service', texte: 'Chef Vertu vous prépare des repas faits maison, adaptés à vos besoins de santé. Bien manger tous les jours, sans y penser.' },
+              { num: '02', titre: 'Une cuisine qui prend soin de vous', texte: 'Chaque recette réduit l\'inflammation, stabilise la glycémie et soutient vos fonctions cognitives. Sans additifs, sans gluten superflu.' },
+              { num: '03', titre: 'Des résultats que vous ressentez', texte: 'Plus d\'énergie, moins de brouillard mental, un sommeil qui s\'améliore. Ce que vous mangez change ce que vous ressentez, dès la première semaine.' },
             ].map(({ num, titre, texte }, i) => (
               <div key={i} style={{ borderTop: '1px solid rgba(0,23,10,0.08)', padding: '2rem 0', display: 'grid', gridTemplateColumns: '48px 1fr 1fr', gap: '1.5rem', alignItems: 'start' }} className="pilier-row">
                 <span style={{ fontFamily: f, fontSize: '0.75rem', fontWeight: '700', color: 'rgba(0,23,10,0.2)', paddingTop: '4px' }}>{num}</span>

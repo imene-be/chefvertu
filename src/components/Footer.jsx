@@ -82,7 +82,7 @@ export default function Footer() {
           gap: '0.75rem',
         }}>
           <span style={{ fontFamily: f, fontSize: '0.8rem', color: 'rgba(255,255,255,0.35)' }}>
-            © 2026 Bentifraouine Imène — Tous droits réservés
+            © 2026 Bentifraouine Imène - Tous droits réservés
           </span>
          
         </div>

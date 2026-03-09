@@ -24,7 +24,7 @@ const sections = [
       <>
         <p>Ce site est hébergé chez <strong>Vercel</strong>, une plateforme de déploiement pensée pour les projets web modernes.</p>
         <p style={{ color: 'rgba(0,23,10,0.5)', fontSize: '0.875rem' }}>
-          Vercel Inc. — 340 Pine Street, Suite 700 — San Francisco, CA 94104, États-Unis<br />
+          Vercel Inc., 340 Pine Street, Suite 700, San Francisco, CA 94104, États-Unis<br />
           vercel.com
         </p>
       </>
@@ -125,7 +125,7 @@ export default function MentionsLegales() {
 
           <div style={{ borderTop: '1px solid rgba(0,23,10,0.07)', paddingTop: '2rem', marginTop: '1rem' }}>
             <p style={{ fontFamily: f, fontSize: '0.78rem', color: 'rgba(0,23,10,0.3)', margin: 0 }}>
-              Réalisé par Bentifraouine Imène — Dernière mise à jour : 22 février 2026
+              Réalisé par Bentifraouine Imène · Dernière mise à jour : 22 février 2026
             </p>
           </div>
         </div>
