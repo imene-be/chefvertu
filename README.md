@@ -44,14 +44,6 @@ npm run build
 | Fond / Blanc | Blanc | `#ffffff` |
 | Footer | Vert nuit profond | `#00170A` |
 
-**Accentuation — tags recettes**
-
-| Rôle | Hex |
-|---|---|
-| Doré / Beige | `#c8a96e` |
-| Vert sauge | `#6b7c5c` |
-| Brun chaud | `#8b6e5a` |
-
 ### Typographie
 
 **Police unique : DM Sans** (Google Fonts)
