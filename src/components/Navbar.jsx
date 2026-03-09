@@ -115,7 +115,7 @@ export default function Navbar() {
             onClick={() => setOpen(!open)}
             aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
             aria-expanded={open}
-            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '0.25rem', color: '#00170A' }}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '0.5rem', color: '#00170A', fontSize: '1.6rem', lineHeight: 1 }}
           >
             {open ? '✕' : '☰'}
           </button>
