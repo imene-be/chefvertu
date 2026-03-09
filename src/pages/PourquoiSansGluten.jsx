@@ -27,26 +27,26 @@ const sections = [
   {
     titre: 'Ce n\'est pas dans vos gènes',
     contenu: [
-      `Le sort de votre cerveau n'est pas écrit dans votre ADN. Maux de tête, dépression, troubles de la mémoire — le coupable n'est pas forcément votre héritage familial.`,
+      `Le sort de votre cerveau n'est pas écrit dans votre ADN. Maux de tête, dépression, troubles de la mémoire  le coupable n'est pas forcément votre héritage familial.`,
       `Il se cache dans la nourriture que vous consommez.`,
     ],
   },
   {
     titre: 'Le gluten, un poison méconnu',
     contenu: [
-      `Au-delà de la maladie cœliaque, le gluten est aujourd'hui identifié comme un déclencheur de démence, d'épilepsie, de dépression et de TDAH. La plupart des gens ne font pas le lien — pourtant, il est direct.`,
+      `Au-delà de la maladie cœliaque, le gluten est aujourd'hui identifié comme un déclencheur de démence, d'épilepsie, de dépression et de TDAH. La plupart des gens ne font pas le lien  pourtant, il est direct.`,
     ],
   },
   {
     titre: 'Alzheimer : et si c\'était un diabète de type 3 ?',
     contenu: [
-      `Les recherches les plus récentes établissent un lien fort entre la consommation de sucre et de glucides raffinés et le déclin cognitif. Un cerveau constamment exposé à des pics de glycémie s'enflamme, se détériore — et vieillit prématurément.`,
+      `Les recherches les plus récentes établissent un lien fort entre la consommation de sucre et de glucides raffinés et le déclin cognitif. Un cerveau constamment exposé à des pics de glycémie s'enflamme, se détériore  et vieillit prématurément.`,
     ],
   },
   {
     titre: 'Les graisses sont vos alliées',
     contenu: [
-      `On a diabolisé les graisses pendant des décennies. C'était une erreur. Le cerveau est composé à 60% de graisses. Les bonnes graisses — huile d'olive, avocat, noix, poissons gras — le nourrissent et le protègent. Ce sont les glucides qui l'endommagent.`,
+      `On a diabolisé les graisses pendant des décennies. C'était une erreur. Le cerveau est composé à 60% de graisses. Les bonnes graisses  huile d'olive, avocat, noix, poissons gras  le nourrissent et le protègent. Ce sont les glucides qui l'endommagent.`,
     ],
   },
   {
@@ -58,7 +58,7 @@ const sections = [
   {
     titre: 'Votre cerveau peut se régénérer',
     contenu: [
-      `La neurogenèse — la capacité du cerveau à créer de nouveaux neurones — est réelle et possible à tout âge. L'exercice physique, le jeûne intermittent et une alimentation pauvre en glucides stimulent la production de BDNF, la protéine qui favorise cette régénération.`,
+      `La neurogenèse  la capacité du cerveau à créer de nouveaux neurones  est réelle et possible à tout âge. L'exercice physique, le jeûne intermittent et une alimentation pauvre en glucides stimulent la production de BDNF, la protéine qui favorise cette régénération.`,
     ],
   },
   {
@@ -70,7 +70,7 @@ const sections = [
   {
     titre: 'Même si vous vous portez bien',
     contenu: [
-      `Vous n'avez pas besoin d'être malade pour agir. Moins de gluten, moins de glucides raffinés — c'est plus d'énergie, un esprit plus clair, et un cerveau qui vieillit mieux.`,
+      `Vous n'avez pas besoin d'être malade pour agir. Moins de gluten, moins de glucides raffinés  c'est plus d'énergie, un esprit plus clair, et un cerveau qui vieillit mieux.`,
     ],
   },
 ]
@@ -90,9 +90,9 @@ export default function PourquoiSansGluten() {
       <section style={{ backgroundColor: '#f0f8f4', padding: '6rem 1.5rem' }}>
         <div style={{ maxWidth: '780px', margin: '0 auto', textAlign: 'center' }}>
           <blockquote style={{ fontFamily: f, fontWeight: '700', fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontStyle: 'italic', color: D, lineHeight: '1.7', margin: '0 0 1.25rem' }}>
-            "Le sort de votre cerveau n'est pas écrit dans votre ADN. La dégénérescence n'est pas une fatalité — elle se cache dans la nourriture que vous consommez."
+            "Le sort de votre cerveau n'est pas écrit dans votre ADN. La dégénérescence n'est pas une fatalité  elle se cache dans la nourriture que vous consommez."
           </blockquote>
-          <p style={{ fontFamily: f, fontSize: '0.875rem', color: G, fontWeight: '600', margin: 0 }}>— Dr David Perlmutter, neurologue</p>
+          <p style={{ fontFamily: f, fontSize: '0.875rem', color: G, fontWeight: '600', margin: 0 }}> Dr David Perlmutter, neurologue</p>
         </div>
       </section>
 
@@ -127,7 +127,7 @@ export default function PourquoiSansGluten() {
           <p style={{ fontFamily: f, fontSize: '0.72rem', fontWeight: '700', color: G, textTransform: 'uppercase', letterSpacing: '0.14em', marginBottom: '2rem', marginTop: 0 }}>Ce que dit la science</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1px', backgroundColor: 'rgba(0,70,30,0.07)', borderRadius: '10px', overflow: 'hidden' }}>
             {[
-              { stat: '60%', label: 'du cerveau est composé de graisses — les bonnes graisses le nourrissent.' },
+              { stat: '60%', label: 'du cerveau est composé de graisses  les bonnes graisses le nourrissent.' },
               { stat: '×3', label: 'le risque de démence est multiplié par 3 chez les gros consommateurs de glucides.' },
               { stat: '10%', label: 'de la population serait sensible au gluten sans le savoir.' },
               { stat: '↑BDNF', label: 'l\'exercice et le jeûne stimulent la protéine qui crée de nouveaux neurones.' },
@@ -179,7 +179,7 @@ export default function PourquoiSansGluten() {
               4 semaines pour tout changer
             </h2>
             <p style={{ fontFamily: f, fontSize: '1rem', color: 'rgba(255,255,255,0.5)', margin: 0, maxWidth: '520px', lineHeight: '1.7' }}>
-              Le Dr Perlmutter propose un protocole simple en quatre étapes. Pas de régime draconien — juste un changement progressif, pilier par pilier.
+              Le Dr Perlmutter propose un protocole simple en quatre étapes. Pas de régime draconien  juste un changement progressif, pilier par pilier.
             </p>
           </div>
 
@@ -194,13 +194,13 @@ export default function PourquoiSansGluten() {
               {
                 semaine: 'Semaine 2',
                 theme: 'Mouvement',
-                desc: 'L\'exercice physique stimule la production de BDNF — la protéine de la neurogenèse. 20 à 30 minutes par jour suffisent à relancer le cerveau.',
+                desc: 'L\'exercice physique stimule la production de BDNF  la protéine de la neurogenèse. 20 à 30 minutes par jour suffisent à relancer le cerveau.',
                 actions: ['Marche rapide quotidienne', 'Exercice d\'endurance léger', 'Bouger après les repas'],
               },
               {
                 semaine: 'Semaine 3',
                 theme: 'Sommeil',
-                desc: 'Le cerveau se nettoie, se répare et consolide la mémoire pendant le sommeil. Un bon sommeil régule aussi la leptine — l\'hormone de la satiété.',
+                desc: 'Le cerveau se nettoie, se répare et consolide la mémoire pendant le sommeil. Un bon sommeil régule aussi la leptine  l\'hormone de la satiété.',
                 actions: ['Coucher à heure fixe', 'Pas d\'écran avant de dormir', '7 à 8h par nuit'],
               },
               {
@@ -261,7 +261,7 @@ export default function PourquoiSansGluten() {
             Prêt(e) à passer à l'action ?
           </h2>
           <p style={{ fontFamily: f, fontSize: '0.95rem', color: 'rgba(0,23,10,0.52)', lineHeight: '1.7', marginBottom: '2rem' }}>
-            Des recettes simples, savoureuses et sans gluten — pour commencer dès aujourd'hui.
+            Des recettes simples, savoureuses et sans gluten  pour commencer dès aujourd'hui.
           </p>
           <Link to="/recettes"
             style={{ display: 'inline-flex', alignItems: 'center', backgroundColor: G, color: 'white', padding: '0.875rem 1.75rem', borderRadius: '8px', fontFamily: f, fontSize: '0.95rem', fontWeight: '700', textDecoration: 'none' }}

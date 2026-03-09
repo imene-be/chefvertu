@@ -26,7 +26,7 @@ export default function Home() {
     <div style={{ paddingTop: '60px' }}>
 
       {/* ─── HERO ─── */}
-      <section style={{ backgroundColor: '#ffffff', padding: '5rem 4rem', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ backgroundColor: '#ffffff', padding: 'clamp(3rem, 6vw, 5rem) clamp(1.25rem, 5vw, 4rem)', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 60% 50% at 70% 50%, rgba(0,70,30,0.04) 0%, transparent 70%)', pointerEvents: 'none' }} />
 
         <div style={{ maxWidth: '1100px', margin: '0 auto', width: '100%', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2.5rem', alignItems: 'center' }} className="hero-grid">
@@ -60,7 +60,7 @@ export default function Home() {
           </div>
 
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} className="hero-logo">
-            <img src={chefVertuLogo} alt="Chef Vertu" style={{ width: 'min(300px, 90%)', height: 'auto', opacity: 0.95 }} />
+            <img src={chefVertuLogo} alt="Chef Vertu" fetchpriority="high" width="300" height="300" style={{ width: 'min(300px, 90%)', height: 'auto', opacity: 0.95 }} />
           </div>
         </div>
 
@@ -108,7 +108,7 @@ export default function Home() {
       {/* ─── TROUBLES ─── */}
       <section style={{ backgroundColor: '#ffffff', padding: '4rem 1.5rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'start' }} className="troubles-grid">
-          <div style={{ position: 'sticky', top: '80px' }}>
+          <div>
             <p style={{ fontFamily: f, fontSize: '0.75rem', fontWeight: '700', color: G, textTransform: 'uppercase', letterSpacing: '0.14em', marginBottom: '0.75rem', marginTop: 0 }}>Et même si vous vous portez bien</p>
             <h2 style={{ fontFamily: f, fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: '900', color: D, margin: '0 0 1.25rem', lineHeight: '1.2' }}>
               Prévenir vaut mieux que guérir
@@ -175,7 +175,7 @@ export default function Home() {
             Votre santé future se construit aujourd'hui
           </h2>
           <p style={{ fontFamily: f, fontSize: '1rem', color: 'rgba(255,255,255,0.45)', lineHeight: '1.7', margin: '0 0 2.5rem' }}>
-            Commencez par comprendre — puis passez à table.
+            Commencez par comprendre, puis passez à table.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link to="/recettes"

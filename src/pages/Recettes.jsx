@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { recettes, categories } from '../data/recettes'
 
 const G = '#00461E'
@@ -18,7 +19,7 @@ export default function Recettes() {
     <div style={{ paddingTop: '90px' }}>
 
       {/* Header + Filter */}
-      <section style={{ backgroundColor: '#ffffff', borderBottom: '1px solid rgba(0,70,30,0.08)', position: 'sticky', top: '72px', zIndex: 30, backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)' }}>
+      <section style={{ backgroundColor: '#ffffff', borderBottom: '1px solid rgba(0,70,30,0.08)', position: 'sticky', top: '72px', zIndex: 30 }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '1.75rem 1.5rem 0' }}>
           <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: '1.25rem', flexWrap: 'wrap', gap: '0.5rem' }}>
             <div>
@@ -63,7 +64,7 @@ export default function Recettes() {
       {/* Grid */}
       <section style={{ padding: '3rem 1.5rem', backgroundColor: '#ffffff' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(300px, 100%), 1fr))', gap: '1.5rem' }}>
             {filtered.map(recette => (
               <RecetteCard
                 key={recette.id}
@@ -101,13 +102,15 @@ function RecetteCard({ recette, onOpen }) {
       onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.borderColor = GB }}
     >
       {recette.image ? (
-        <div style={{
-          height: '200px',
-          backgroundImage: `url(${recette.image})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          borderBottom: `1px solid rgba(0,70,30,0.06)`,
-        }} />
+        <div style={{ height: '200px', overflow: 'hidden', borderBottom: `1px solid rgba(0,70,30,0.06)` }}>
+          <img
+            src={recette.image}
+            alt={recette.titre}
+            loading="lazy"
+            decoding="async"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+        </div>
       ) : (
         <div style={{
           height: '130px',
@@ -159,12 +162,17 @@ function RecetteCard({ recette, onOpen }) {
 }
 
 function RecetteModal({ recette, onClose }) {
-  return (
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    return () => { document.body.style.overflow = '' }
+  }, [])
+
+  return createPortal(
     <div
       style={{
         position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
         backgroundColor: 'rgba(0,23,10,0.7)',
-        zIndex: 100,
+        zIndex: 9999,
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         padding: '1rem',
         backdropFilter: 'blur(6px)',
@@ -180,13 +188,24 @@ function RecetteModal({ recette, onClose }) {
         overflowY: 'auto',
         boxShadow: '0 40px 80px rgba(0,23,10,0.4)',
       }}>
+        {/* Image */}
+        {recette.image && (
+          <div style={{
+            height: '220px',
+            backgroundImage: `url(${recette.image})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            borderRadius: '20px 20px 0 0',
+          }} />
+        )}
+
         {/* Header */}
         <div style={{
-          padding: '2rem 2rem 1.5rem',
+          padding: '1.5rem 2rem',
           borderBottom: `1px solid rgba(0,70,30,0.1)`,
           display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start',
           position: 'sticky', top: 0, backgroundColor: 'white', zIndex: 1,
-          borderRadius: '20px 20px 0 0',
+          borderRadius: recette.image ? 0 : '20px 20px 0 0',
         }}>
           <div>
             <h2 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.5rem', color: D, marginTop: 0, marginBottom: '0.5rem' }}>
@@ -217,7 +236,7 @@ function RecetteModal({ recette, onClose }) {
             <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.875rem', color: D, marginTop: '0.25rem', marginBottom: 0 }}>{recette.bienfaits}</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }} className="modal-grid">
             <div>
               <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.1rem', color: D, marginBottom: '1rem', marginTop: 0 }}>Ingrédients</h3>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
@@ -252,6 +271,7 @@ function RecetteModal({ recette, onClose }) {
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   )
 }

@@ -19,7 +19,7 @@ export default function Footer() {
               style={{ height: '80px', width: 'auto', filter: 'brightness(0) invert(1)', opacity: 0.88, marginBottom: '1.25rem', display: 'block' }}
             />
             <p style={{ fontFamily: f, fontSize: '0.875rem', lineHeight: '1.75', color: 'rgba(255,255,255,0.42)', margin: '0 0 1.5rem', maxWidth: '280px' }}>
-              Une cuisine sans gluten, ancrée dans la science — pour vivre mieux et plus longtemps.
+              Une cuisine sans gluten, ancrée dans la science pour vivre mieux et plus longtemps.
             </p>
             <p style={{ fontFamily: f, fontSize: '0.78rem', lineHeight: '1.6', color: 'rgba(255,255,255,0.22)', margin: 0 }}>
               Les informations présentées sont à visée éducative uniquement et ne constituent pas un avis médical.

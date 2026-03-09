@@ -105,9 +105,6 @@ export default function MentionsLegales() {
           <h1 style={{ fontFamily: f, fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: '900', color: D, margin: '0 0 0.75rem', lineHeight: '1.1' }}>
             Mentions légales
           </h1>
-          <p style={{ fontFamily: f, fontSize: '0.875rem', color: 'rgba(0,23,10,0.45)', margin: 0 }}>
-            chefvertu.fr — Réalisé par © 2026 Bentifraouine Imène — Tous droits réservés
-          </p>
         </div>
       </section>
 

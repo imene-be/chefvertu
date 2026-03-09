@@ -21,8 +21,6 @@ export default function Navbar() {
     <nav style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
       backgroundColor: '#ffffff',
-      backdropFilter: 'blur(20px)',
-      WebkitBackdropFilter: 'blur(20px)',
       borderBottom: '1px solid rgba(0,23,10,0.07)',
       boxShadow: '0 1px 24px rgba(0,23,10,0.05)',
     }}>
@@ -34,6 +32,8 @@ export default function Navbar() {
             <img
               src={chefVertuLogo}
               alt="Chef Vertu"
+              width="140"
+              height="56"
               style={{ height: '56px', width: 'auto' }}
             />
           </Link>
@@ -91,19 +91,20 @@ export default function Navbar() {
             to="/recettes"
             className="desktop-cta"
             style={{
-              backgroundColor: '#00461E',
-              color: 'white',
+              backgroundColor: '#ffffff',
+              color: '#00461E',
               padding: '0.6rem 1.5rem',
               borderRadius: '8px',
+              border: '1.5px solid #00461E',
               fontFamily: "'DM Sans', sans-serif",
               fontSize: '0.9rem',
               fontWeight: '700',
               textDecoration: 'none',
-              transition: 'background-color 0.2s ease',
+              transition: 'all 0.2s ease',
               letterSpacing: '0.01em',
             }}
-            onMouseEnter={e => e.target.style.backgroundColor = '#003618'}
-            onMouseLeave={e => e.target.style.backgroundColor = '#00461E'}
+            onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#00461E'; e.currentTarget.style.color = 'white' }}
+            onMouseLeave={e => { e.currentTarget.style.backgroundColor = '#ffffff'; e.currentTarget.style.color = '#00461E' }}
           >
             Voir les recettes
           </Link>
@@ -112,6 +113,8 @@ export default function Navbar() {
           <button
             className="mobile-burger"
             onClick={() => setOpen(!open)}
+            aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
+            aria-expanded={open}
             style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '0.25rem', color: '#00170A' }}
           >
             {open ? '✕' : '☰'}
@@ -125,6 +128,7 @@ export default function Navbar() {
           backgroundColor: '#ffffff',
           borderTop: '1px solid rgba(0,70,30,0.12)',
           padding: '1rem 1.5rem 1.5rem',
+          animation: 'slideDown 0.2s ease forwards',
         }}>
           {links.map(({ to, label }) => {
             const active = location.pathname === to

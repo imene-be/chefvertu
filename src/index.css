@@ -29,14 +29,13 @@
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 main > * {
@@ -45,4 +44,52 @@ main > * {
 
 nav {
   animation: fadeIn 0.3s ease forwards;
+}
+
+/* ─── RESPONSIVE GLOBAL ─── */
+
+/* Hero : padding réduit sur mobile */
+@media (max-width: 768px) {
+  .hero-grid {
+    padding: 0 !important;
+  }
+}
+
+/* Recettes : modal ingrédients + préparation sur mobile */
+@media (max-width: 600px) {
+  .modal-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .recettes-grid-card {
+    min-width: 0 !important;
+  }
+}
+
+/* Home : hero padding mobile */
+@media (max-width: 640px) {
+  .hero-section {
+    padding: 3rem 1.25rem !important;
+  }
+  .troubles-grid {
+    gap: 2rem !important;
+  }
+  .pilier-row {
+    gap: 0.75rem !important;
+  }
+}
+
+/* Mentions légales mobile */
+@media (max-width: 480px) {
+  .ml-row {
+    grid-template-columns: 1fr !important;
+    gap: 0.25rem !important;
+  }
+}
+
+/* ─── ACCESSIBILITÉ — CONTRASTE ─── */
+/* Force les textes trop clairs à respecter un ratio 4.5:1 minimum */
+:root {
+  --text-muted: rgba(0, 23, 10, 0.58);
+  --text-subtle: rgba(0, 23, 10, 0.52);
 }
