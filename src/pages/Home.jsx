@@ -99,9 +99,9 @@ export default function Home() {
       <section style={{ backgroundColor: '#f0f8f4', padding: '4rem 1.5rem' }}>
         <div style={{ maxWidth: '780px', margin: '0 auto', textAlign: 'center' }}>
           <blockquote style={{ fontFamily: f, fontWeight: '700', fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontStyle: 'italic', color: D, lineHeight: '1.7', margin: '0 0 1.25rem' }}>
-            "Le sort de votre cerveau n'est pas écrit dans votre ADN. La dégénérescence n'est pas une fatalité — elle se cache dans la nourriture que vous consommez."
+            "Le sort de votre cerveau n'est pas écrit dans votre ADN. La dégénérescence n'est pas une fatalité,  elle se cache dans la nourriture que vous consommez."
           </blockquote>
-          <p style={{ fontFamily: f, fontSize: '0.875rem', color: G, fontWeight: '600', margin: 0 }}>— Dr David Perlmutter, neurologue</p>
+          <p style={{ fontFamily: f, fontSize: '0.875rem', color: G, fontWeight: '600', margin: 0 }}> Dr David Perlmutter, neurologue</p>
         </div>
       </section>
 
@@ -154,7 +154,7 @@ export default function Home() {
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             {[
               { num: '01', titre: 'Bio & naturel', texte: 'Des ingrédients non transformés, proches de la nature, pour nourrir votre corps en profondeur.' },
-              { num: '02', titre: 'Énergie durable', texte: 'Sans pics de glycémie, sans coup de fatigue — une énergie stable tout au long de la journée.' },
+              { num: '02', titre: 'Énergie durable', texte: 'Sans pics de glycémie, sans coup de fatigue  une énergie stable tout au long de la journée.' },
               { num: '03', titre: 'Cerveau protégé', texte: 'Moins de gluten, moins d\'inflammation. Un cerveau qui fonctionne mieux, plus longtemps.' },
             ].map(({ num, titre, texte }, i) => (
               <div key={i} style={{ borderTop: '1px solid rgba(0,23,10,0.08)', padding: '2rem 0', display: 'grid', gridTemplateColumns: '48px 1fr 1fr', gap: '1.5rem', alignItems: 'start' }} className="pilier-row">
